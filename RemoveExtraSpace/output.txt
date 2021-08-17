@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+
+ int a = 5, sum;
+
+ sum = a + 1;
+
+ printf("%d", sum);
+
+
+ return 0;
+
+}
