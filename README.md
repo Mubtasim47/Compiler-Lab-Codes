@@ -1,4 +1,4 @@
-# Compiler-Lab-Codes
+# Compiler Lab Codes
 
 This repository can be helpful if someone is trying to solve compiler design programs. Here all the code is written in C. Programs implemented here are:
 
