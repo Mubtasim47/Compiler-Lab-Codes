@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+
+     //this is a comment
+     int a = 5;
+
+     /*block
+     comment here*/
+
+     int b = a / 2;
+
+     //another comment
+     printf("C Programming");
+
+
+     return 0;
+}
