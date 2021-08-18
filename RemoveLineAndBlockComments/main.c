@@ -1,8 +1,11 @@
 //C program to remove both block and line comment from a source file
 
 #include <stdio.h>
+
 void remove_comment(char);
+
 FILE *fpi, *fpo;
+
 int main() {
     char c;
     fpi = fopen("input.txt", "r");
