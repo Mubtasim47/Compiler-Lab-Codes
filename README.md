@@ -1,6 +1,6 @@
 # Compiler Lab Codes
 
-This repository can be helpful if someone is trying to solve compiler design programs. Here all the code is written in C. Programs implemented here are:
+This repository can be helpful if someone is trying to solve compiler design programs. Here all the codes are written in C. Programs implemented here are:
 
 <ul>
   <li>Program to remove space from a source code.</li>
