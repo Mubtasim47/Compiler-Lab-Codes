@@ -1,8 +1,11 @@
 //Remove line comment(s) from a source code
 
 #include <stdio.h>
+
 void remove_comment(char);
+
 FILE *fpi, *fpo;
+
 int main() {
     char c;
     fpi = fopen("input.txt", "r");
@@ -32,5 +35,4 @@ void remove_comment (char ch) {
 
     }
     fputc(ch, fpo);
-
 }
