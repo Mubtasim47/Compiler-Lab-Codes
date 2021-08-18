@@ -14,7 +14,6 @@ int main() {
 
     int i = -1;
     while(str[++i] != '\0') {
-        printf("i = %d\n", i);
 
         switch (state) {
 
