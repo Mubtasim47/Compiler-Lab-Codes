@@ -1,17 +1,23 @@
-//program to check whether a given identifier is valid or not
-
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
 
 bool isAlphabet(char);
-
 bool isNumber(char);
+
+bool isAlphabet(char ch) {
+    return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
+}
+
+bool isNumber(char ch) {
+    return (ch >= '0' && ch <= '9');
+}
 
 
 int main() {
 
     char str[50];
+
 
     printf("Enter a string:\n");
     gets(str);
@@ -24,8 +30,7 @@ int main() {
             "goto", "sizeof", "volatile", "do", "if", "static", "while"
     };
 
-  
-    //check for keyword 
+
     for (int i = 0; i < 32; i++) {
         if (!strcmp(str, keyword[i])) {
             printf("Valid keyword\n");
@@ -35,7 +40,7 @@ int main() {
 
     bool $validIdentifier = false;
 
-    if (isAlphabet(str[0]) || str[0] == '_') {
+    if (isAlphabet(str[0]) || str[0] == '_' || str[0] == '$') {
         $validIdentifier = true;
         int i = 0;
         while (str[i] != '\0') {
@@ -54,13 +59,3 @@ int main() {
 
     return 0;
 }
-
-
-bool isAlphabet(char ch) {
-    return (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
-}
-
-bool isNumber(char ch) {
-    return (ch >= '0' && ch <= '9');
-}
-
