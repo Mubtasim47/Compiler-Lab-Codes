@@ -3,21 +3,24 @@
 #include <stdio.h>
 
 int main() {
- FILE *finput, *foutput;
- char ch;
- finput = fopen("input.txt", "r");
- foutput = fopen("output.txt", "w");
- if(finput == NULL)
- printf("Error in opening file...");
- while((ch = fgetc(finput)) != EOF) {
- if(ch == ' ') {
- putc(ch, foutput);
- for (int i = 0; (ch = fgetc(finput)) == ' '; i++);
- }
- putc(ch, foutput);
- }
- fclose(finput);
- fclose(foutput);
- return 0;
- 
+    FILE *finput, *foutput;
+    char ch;
+    finput = fopen("input.txt", "r");
+    foutput = fopen("output.txt", "w");
+    if(finput == NULL) {
+        printf("Error in opening file...");
+        return 0;
+    }
+        
+    while((ch = fgetc(finput)) != EOF) {
+        if(ch == ' ') {
+            putc(ch, foutput);
+            for (int i = 0; (ch = fgetc(finput)) == ' '; i++);
+        }
+        putc(ch, foutput);
+    }
+    fclose(finput);
+    fclose(foutput);
+    return 0;
+
 }
